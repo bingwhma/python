@@ -1,3 +1,5 @@
+referrence url: http://www.runoob.com/django/django-tutorial.html
+
 Django install
 
 pip install Django==1.11.7
