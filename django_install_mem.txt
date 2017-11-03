@@ -48,3 +48,26 @@ TemplateDoesNotExist
 'DIRS': [os.path.join(BASE_DIR, 'helloworld/templates')],
 PS:注意斜杠是 '/'
 一个萌新踩过的坑
+
+
+安装 mysql 驱动，可以执行以下命令安装：
+sudo pip install mysqlclient
+
+settings.py 文件中找到 DATABASES 配置项，将其信息修改为：
+HelloWorld/HelloWorld/settings.py: 文件代码：
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
+        'NAME': 'test',
+        'USER': 'test',
+        'PASSWORD': 'test123',
+        'HOST':'localhost',
+        'PORT':'3306',
+    }
+}
+这里添加了中文注释，所以你需要在 HelloWorld/settings.py 文件头部添加 # -*- coding: UTF-8 -*-。
+
+
+创建 APP
+Django规定，如果要使用模型，必须要创建一个app。我们使用以下命令创建一个 TestModel 的 app:
+django-admin.py startapp TestModel
