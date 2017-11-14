@@ -1,3 +1,6 @@
+http://docs.sqlalchemy.org/en/latest/orm/tutorial.html#version-check
+
+
 前言
 
 发现翻译全文时间比较久，所以先整个简单的使用说明吧

@@ -37,3 +37,9 @@ for name in session.query(User.name).filter_by(password='123'):
 	print(name)
 
 session.close()
+
+connection = engine.connect()
+result = connection.execute("select * from tbm_users")
+for row in result:
+    print("name:", row['name'])
+connection.close()
